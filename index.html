@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection System</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <header>
+        <h1>Tech University</h1>
+        <nav>
+            <ul>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#teachers">Teachers</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="courses">
+            <h2>Course Selection</h2>
+            <div class="course-list">
+                <div class="course-item">
+                    <h3>Course 1: Data Structures</h3>
+                    <p>Select Teacher:</p>
+                    <select>
+                        <option>Prof. John Doe</option>
+                        <option>Prof. Jane Smith</option>
+                        <option>Dr. Michael Brown</option>
+                    </select>
+                </div>
+                <div class="course-item">
+                    <h3>Course 2: Database Management Systems</h3>
+                    <p>Select Teacher:</p>
+                    <select>
+                        <option>Dr. Emily White</option>
+                        <option>Prof. Alan Johnson</option>
+                        <option>Dr. Susan Green</option>
+                    </select>
+                </div>
+                <div class="course-item">
+                    <h3>Course 3: Full Stack</h3>
+                    <p>Select Teacher:</p>
+                    <select>
+                        <option>Dr. Likhitha</option>
+                        <option>Prof. lilly</option>
+                        <option>Dr. mango</option>
+                    </select>
+                </div>
+                <div class="course-item">
+                    <h3>Course 4:Machine Learning </h3>
+                    <p>Select Teacher:</p>
+                    <select>
+                        <option>Dr. Meghana</option>
+                        <option>Prof. Malathi</option>
+                        <option>Dr. Brinda</option>
+                    </select>
+                </div>
+                <div class="course-item">
+                    <h3>Course 5: Data Analytics LAB</h3>
+                    <p>Select Teacher:</p>
+                    <select>
+                        <option>Dr. White</option>
+                        <option>Prof. Johnson</option>
+                        <option>Dr. Green</option>
+                    </select>
+                </div>
+                <div class="course-item">
+                    <h3>Course 5: Big Data LAB</h3>
+                    <p>Select Teacher:</p>
+                    <select>
+                        <option>Dr. Vishnu</option>
+                        <option>Prof. Bhavya</option>
+                        <option>Dr. Nandini</option>
+                    </select>
+
+                    
+                </div>
+                <!-- More courses can be added similarly -->
+                
+            </div>
+           <br> <button type="submit" content="width=device-width">submit</button>
+        </section>
+
+        <section id="teachers">
+            <h2>Teacher Profiles</h2>
+            <div class="teacher-profile">
+                <h3>Dr. John Doe</h3>
+                <p>Academic Background: Ph.D. in Computer Science</p>
+                <p>Research Projects: Machine Learning, Data Mining</p>
+                <p>Ratings (Last 4 Years): 4.5/5</p>
+            </div>
+            <div class="teacher-profile">
+                <h3>Prof. Jane Smith</h3>
+                <p>Academic Background: M.S. in Information Technology</p>
+                <p>Research Projects: Cybersecurity, Network Protocols</p>
+                <p>Ratings (Last 4 Years): 4.3/5</p>
+            </div>
+            <!-- More teacher profiles can be added similarly -->
+        </section>
+
+        <section id="feedback">
+            <h2>Submit Feedback</h2>
+            <form>
+                <label for="teacher">Select Teacher:</label>
+                <select id="teacher">
+                    <option>Dr. John Doe</option>
+                    <option>Prof. Jane Smith</option>
+                    <option>Dr. Michael Brown</option>
+                </select>
+                <select id="teacher">
+                    <option>Dr. Vishnu</option>
+                    <option>Prof. Bhavya</option>
+                    <option>Dr. Nandini</option>
+                </select>
+                <label for="rating">Rating:</label>
+                <input type="number" id="rating" min="1" max="5" placeholder="1-5">
+
+                <label for="comments">Comments:</label>
+                <textarea id="comments" rows="4" placeholder="Enter your feedback here..."></textarea>
+                
+<button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

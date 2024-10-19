@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+        input {
+            width: 90%;
+            height: 30px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            height: 40px;
+            background-color: blueviolet;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 style="text-align: center; margin-bottom: 20px;">Student Login</h2>
+
+        <form id="loginForm" onsubmit="return validateForm()">
+            <label style="display: block; margin-bottom: 10px;">Username:</label>
+            <input type="text" id="username">
+            <span id="usernameError" class="error"></span>
+
+            <label style="display: block; margin-bottom: 10px;">Password:</label>
+            <input type="password" id="password">
+            <span id="passwordError" class="error"></span>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p style="text-align: center; margin-top: 10px;">
+            <a href="#" style="color: blueviolet">Forgot Password?</a>
+        </p>
+    </div>
+
+    <script>
+        function validateForm() {
+            // Clear previous error messages
+            document.getElementById("usernameError").textContent = "";
+            document.getElementById("passwordError").textContent = "";
+
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let valid = true;
+
+            // Validate username
+            if (username.length !== 10) {
+                document.getElementById("usernameError").textContent = "User is invalid."
+                valid = false;
+            }
+
+            // Validate password
+            const passwordPattern = /^(?=.*[A-Z])(?=.*[\W_]).{8,}$/;
+            if (!passwordPattern.test(password)) {
+                document.getElementById("passwordError").textContent = "Password is invalid.";
+                valid = false;
+            }
+
+            // Redirect if valid
+            if (valid) {
+                window.location.href = "index.html"; // Replace with your target page
+            }
+
+            return false; // Prevent default form submission
+        }
+    </script>
+</body>
+</html>
